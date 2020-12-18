@@ -1,0 +1,368 @@
+@media screen and (min-width: 0px) and (max-width: 767px) {
+
+    .calculator-main-layout {
+        margin-top: 0px;
+    }
+
+    .nav-bar-mobile {
+        height: 55px;
+    }
+
+    .calculator-main-layout {
+        clear: both;
+    }
+
+    .navbar-toggle {
+        margin-right: 0px;
+    }
+
+    .navbar-collapse.in {
+        background: #fff none repeat scroll 0 0;
+        overflow-y: auto;
+
+    }
+
+    .navbar-nav > li .order-call, .navbar-nav > li .order-call:hover {
+        margin-right: 0px;
+    }
+
+    .navbar-scrolled {
+        height: 55px;
+    }
+
+    .navbar-brand {
+        display: none;
+    }
+
+    .navbar-brand-mobile {
+        display: block;
+    }
+
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin-left: 15px;
+        margin-top: 5px;
+    }
+
+    .nav.navbar-nav {
+        margin-top: 0px;
+    }
+
+    .return-label-index {
+        position: absolute;
+        margin-top: 175px;
+        margin-left: 0px;
+    }
+
+    .news-index-bullet {
+        display: none;
+    }
+
+    .main-content-layout.main-layout-write-order .btn-order-large {
+        width: 300px;
+    }
+
+    .news-main-item img {
+        margin-left: 0px;
+        padding-top: 15px;
+    }
+
+    .nav-bar-bottom-container {
+        display: none;
+    }
+
+    .footer-item-index {
+        display: none;
+    }
+
+    .top-bar-default-container {
+        display: none;
+    }
+
+    .search-container {
+        display: none;
+    }
+
+    .navbar-nav > li > a {
+        height: 38px;
+    }
+
+    .news-main-item .btn-more {
+        position: relative;
+        top: auto;
+        margin: 25px auto 50px
+    }
+
+    .news-main-item .col-md-3 .row {
+        margin-left: 0px;
+    }
+
+    .news-main-item img {
+        border-right: none;
+    }
+
+    .nav-bar-bottom-container .navbar-nav {
+        padding-left: 15px;
+    }
+
+    .footer-layout {
+        padding-top: 35px;
+    }
+
+    .news-main-item .news-item-date {
+        position: relative;
+        top: auto;
+        margin-left: 0px;
+        padding-left: 28px;
+        margin-bottom: 40px;
+    }
+
+    .news-main-item-index-last {
+        width: 100%;
+    }
+
+    .news-main-item .col-md-6 .row {
+        padding-right: 0px;
+    }
+
+    .news-main-item-index-last {
+        border-left: none;
+    }
+
+    .news-main-item-last .row {
+        padding-left: 15px;
+    }
+
+    .news-main-item-index-last {
+        margin-left: 0px;
+    }
+
+    .news-main-item .btn-more {
+        position: relative;
+        top: auto;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    .news-main-item.news-main-item-last .btn-more {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .calculator-main-layout-sclolled {
+        margin-top: 180px;
+    }
+
+    .nav.navbar-nav {
+        float: right;
+        margin-right: 15px;
+    }
+
+    .top-bar-item {
+        font-size: 15px;
+    }
+
+    .top-bar-item span {
+        font-size: 18px;
+    }
+
+    .navbar-nav {
+        margin-top: 4px;
+    }
+
+    .navbar-brand {
+        background-image: url("../images/logo-basic-tablet.png");
+        width: 99px;
+        height: 65px;
+    }
+
+    .nav > li > a {
+        font-size: 13px;
+        padding: 7px 5px !important;
+    }
+
+    .navbar-nav > li .order-call, .navbar-nav > li .order-call:hover {
+        margin-top: 0px;
+    }
+
+    .return-label-index {
+        position: absolute;
+    }
+
+    .news-index-bullet {
+        display: none;
+    }
+
+    .news-main-item img {
+        margin-left: 0px;
+        padding-top: 15px;
+    }
+
+    .news-main-item .col-md-3 .row {
+        margin-left: 0px;
+    }
+
+    .news-main-item img {
+        border-right: none;
+    }
+
+    .nav-bar-bottom-container .navbar-nav {
+        padding-left: 15px;
+    }
+
+    .footer-layout {
+        padding-top: 35px;
+    }
+
+    .news-main-item .news-item-date {
+        position: relative;
+        top: auto;
+        margin-left: 0px;
+        padding-left: 28px;
+        margin-bottom: 40px;
+    }
+
+    .news-main-item-index-last {
+        width: 100%;
+    }
+
+    .news-main-item .col-md-6 .row {
+        padding-right: 0px;
+    }
+
+    .news-main-item-index-last {
+        border-left: none;
+    }
+
+    .news-main-item-last .row {
+        padding-left: 15px;
+    }
+
+    .news-main-item-index-last {
+        margin-left: 0px;
+    }
+
+    .news-main-item .btn-more {
+        position: relative;
+        top: auto;
+        margin: 25px auto 50px
+    }
+
+    .news-main-item.news-main-item-last .btn-more {
+        margin-bottom: 20px;
+    }
+
+    .navbar-scrolled {
+        height: 122px;
+    }
+
+    .navbar-brand-scrolled {
+        margin-left: 312px !important;
+        margin-top: 12px !important;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .navbar-scrolled {
+        height: 78px;
+    }
+
+    .navbar-brand-scrolled {
+        margin-left: 30px !important;
+    }
+
+    .navbar-nav-scrolled li a {
+        padding: 7px 6px !important;
+    }
+
+    .nav.navbar-nav {
+        float: right;
+        margin-right: 15px;
+    }
+
+    .navbar-brand {
+        background-image: url("../images/logo-basic-tablet.png");
+        width: 99px;
+        height: 65px;
+    }
+
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin-top: 35px;
+    }
+
+    .navbar-nav {
+        margin-top: 20px;
+    }
+
+    .navbar-nav > li > a {
+
+    }
+
+    .nav > li > a {
+        font-size: 14px;
+        padding: 7px 8px;
+    }
+
+    .news-main-item p {
+        height: 86px;
+        overflow: hidden;
+    }
+
+    .news-main-item .news-item-date {
+        top: 172px;
+    }
+
+    .news-main-item-index-last {
+        height: 204px;
+    }
+
+    .news-main-item.news-main-item-last .btn-more {
+        position: absolute;
+        top: 142px;
+        right: 40px;
+    }
+
+    .news-index-bullet {
+        top: 74px
+    }
+
+    .news-main-item .btn-more {
+        width: auto;
+        top: 147px;
+    }
+
+    .news-main-item {
+        margin-top: -1px;
+    }
+
+    .return-label-index {
+        margin-top: 170px;
+    }
+
+    .navbar-nav > li .order-call, .navbar-nav > li .order-call:hover {
+        margin-top: 0px;
+    }
+
+    .nav-bar-bottom-container .navbar-nav {
+        padding-left: 15px;
+    }
+
+    .footer-layout {
+        padding-top: 35px;
+    }
+
+    .nav-bar-bottom-container .navbar-nav-scrolled li a {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+}
+
+@media screen and (min-width: 1200px) and (max-width: 4000px) {
+    .nav.navbar-nav {
+        float: right;
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Главная / Blitz</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap-slider.css" rel="stylesheet">
+    <link href="css/screen.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/makefixed.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/bootstrap-slider.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(this).scrollTop(0);
+        });
+    </script>
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            $(".money-ammount").slider();
+            $(".money-ammount").on('slide', function (slideEvt) {
+                $(".ammount-index-money").val(slideEvt.value);
+            });
+
+            $(".weeks-ammount").slider();
+            $(".weeks-ammount").on('slide', function (slideEvt) {
+                $(".ammount-index-weeks").val(slideEvt.value);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.fixed').makeFixed();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            if (($(window).height() + 100) < $(document).height()) {
+                $('.top-link-block').removeClass('hidden').affix({
+                    offset: {top: 100}
+                });
+            }
+        });
+    </script>
+
+    <script>
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 55) {
+                $(".navbar").addClass("navbar-scrolled");
+                $(".search-container").addClass("search-container-hidden");
+                $(".navbar-brand").addClass("navbar-brand-scrolled");
+                $(".navbar-nav").addClass("navbar-nav-scrolled");
+                $(".top-bar-default-container").addClass("top-bar-default-container-scrolled");
+                $(".calculator-main-layout").addClass("calculator-main-layout-sclolled");
+
+            } else {
+                $(".navbar").removeClass("navbar-scrolled");
+                $(".search-container").removeClass("search-container-hidden");
+                $(".navbar-brand").removeClass("navbar-brand-scrolled");
+                $(".navbar-nav").removeClass("navbar-nav-scrolled");
+                $(".top-bar-default-container").removeClass("top-bar-default-container-scrolled");
+                $(".calculator-main-layout").removeClass("calculator-main-layout-sclolled");
+            }
+        });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-fixed-top fixed" role="navigation">
+    <div class="top-bar-default-container clearfix">
+        <div class="container">
+            <div class="pull-left top-bar-item">
+                Телефон для справок: <span>+7 499-230-7968</span>
+            </div>
+            <div class="pull-right top-bar-item">
+                Электронная почта: <span>info@blitztime.ru</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="nav-bar-mobile">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse"
+                    class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"></a>
+            <a href="#" class="navbar-brand-mobile"></a>
+        </div>
+        <div class="pull-right search-container">
+            <div class="pull-left">
+                <a href="#"><img src="images/icons/social/icon-vk.png"></a>
+                <a href="#"><img src="images/icons/social/icon-fb.png"></a>
+                <a href="#"><img src="images/icons/social/icon=twitter.png"></a>
+                <a href="#"><img src="images/icons/social/icon-lj.png"></a>
+            </div>
+            <div class="pull-left">
+                <input type="text" class="form-control input-text-default pull-left" placeholder="Поиск...">
+                <button class="button-search-input"></button>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#"><span>О компании</span></a></li>
+                <li><a href="#"><span>Займы</span></a></li>
+                <li><a href="#"><span>Консультация специалиста</span></a></li>
+                <li><a href="#"><span>Полезная информация</span></a></li>
+                <li><a href="#"><span>Контакты</span></a></li>
+                <li><a class="order-call" href="#">Заказать звонок</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="calculator-main-layout">
+    <div class="container">
+        <div class="col-md-5 calculator-main-index">
+            <h1>НА КАКУЮ СУММУ</h1>
+
+            <h3>ВЫ ХОТЕЛИ БЫ ВЗЯТЬ ЗАЙМ?</h3>
+
+            <div class="calculation-index-container">
+                <div class="slider-calculation-index">
+                    <div class="filter-item clearfix">
+                        <label class="pull-left">СУММА ЗАЙМА</label>
+
+                        <div class="pull-left">
+                            <input type="text" class="ammount-index ammount-index-money" value="40000"/>
+                            <span class="data-input-description">р.</span>
+                        </div>
+
+
+                        <input class="money-ammount" type="text" data-slider-min="1500" data-slider-max="50000"
+                               data-slider-step="500" data-slider-value="40000"/>
+                        <span class="slider-helper-text pull-left">1 500 р.</span>
+                        <span class="slider-helper-text pull-right">50 000 р.</span>
+                    </div>
+                    <div class="filter-item clearfix">
+                        <label class="pull-left">СРОК ЗАЙМА</label>
+
+                        <div class="pull-left">
+                            <input type="text" class="ammount-index ammount-index-weeks" value="12"/>
+                            <span class="data-input-description">нед.</span>
+                        </div>
+
+
+                        <input class="weeks-ammount" type="text" data-slider-min="6" data-slider-max="18"
+                               data-slider-step="1" data-slider-value="12"/>
+                        <span class="slider-helper-text pull-left">6 нед.</span>
+                        <span class="slider-helper-text pull-right">18 нед.</span>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-send pull-left">ОТПРАВИТЬ ЗАЯВКУ</a>
+            </div>
+        </div>
+        <div class="col-md-7 calculator-main-description">
+
+            <div class="return-label-index">
+                <div class="return-label-title">
+                    К ВОЗВРАТУ:<span class="required-accept">*</span>
+                </div>
+                <div class="return-sum">
+                    9810<span>р.</span>
+                </div>
+
+            </div>
+
+            <div class="required-accept-description">
+                <span>*</span>Полная стоимость договора
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="main-content-layout">
+    <div class="container">
+        <h2 class="text-center">О КОМПАНИИ</h2>
+
+        <p>Все старания множества регулирующих, контролирующих и надзорных органов направлены на установление
+            цивилизованных отношений Банк-Клиент – суть существования финансовой системы Государства. Все мы
+            сталкивались с банками. Не всегда с приятным результатом: Кому-то отказали в выдаче займа, без объяснения
+            причин. Кто-то никак не может рассчитаться с кредитом, реальные проценты по которому (эффективную процентную
+            ставку по кредиту) пришлось высчитывать в суде целой группе юристов.</p>
+
+        <p>Создавая компанию, мы предполагали оказание финансовой помощи максимально широкому кругу людей, нуждающихся в
+            краткосрочной финансовой поддержке. Если Вам нужны небольшие деньги на недолгий срок за разумную мзду,
+            быстро и без лишних хлопот – значит, Вам нужны именно мы! </p>
+    </div>
+</div>
+<div class="main-content-layout">
+    <div class="container">
+        <h2 class="text-center">РЕАЛЬНЫЕ ПРЕИМУЩЕСТВА</h2>
+
+        <div class="row">
+            <div class="col-sm-4 benefit-item text-center">
+                <img src="images/icons/description/icon-percent.png">
+                <h4>ГИБКАЯ ПРОЦЕНТНАЯ<br>СТАВКА</h4>
+            </div>
+            <div class="col-sm-4 benefit-item text-center">
+                <img src="images/icons/description/icon-flexible.png">
+                <h4>ГИБКАЯ ПРОЦЕНТНАЯ<br>СТАВКА</h4>
+            </div>
+
+            <div class="col-sm-4 benefit-item text-center">
+                <img src="images/icons/description/icon-courier.png">
+                <h4>КУРЬЕРСКИЕ УСЛУГИ</h4>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="main-content-layout main-layout-write-order">
+    <div class="container">
+        <a href="#" class="btn btn-order-large">ЗАПОЛНИТЬ ЗАЯВКУ</a>
+    </div>
+</div>
+
+<div class="main-content-layout">
+    <div class="container">
+        <h2 class="text-center">НОВОСТИ КОМПАНИИ</h2>
+
+        <div class="news-main-item clearfix">
+            <div class="col-md-3">
+                <img class="img-responsive" src="images/tmp/tmp-1.jpg">
+
+                <div class="news-index-bullet"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <h4><a href="#">Открытие нового офиса</a></h4>
+
+                    <p>Еще один новый офис нашей компании в Москве начинает работу
+                        с первого февраля по адресу: Таганская улица, дом 3, Истская!</p>
+                </div>
+                <div class="row news-item-date">21.01.2014 14:34</div>
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive" src="images/tmp/tmp-2.jpg">
+
+                <div class="news-index-bullet"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <h4><a href="#">Рефинансируем обязательства по микрозаймам!</a></h4>
+
+                    <p>Вы исправно платите по договорам, но слишком высокие проценты? Хотите объединить несколько
+                        маленьких займов в один общий? МФО "Блиц" рефинансирует обязательства по действующим договорам
+                        микрозаймов!</p>
+                </div>
+                <div class="row news-item-date">21.01.2014 14:34</div>
+            </div>
+        </div>
+        <div class="news-main-item news-main-item-last clearfix">
+            <div class="col-md-3">
+                <img class="img-responsive" src="images/tmp/tmp-3.jpg">
+
+                <div class="news-index-bullet"></div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <h4><a href="#">Теперь можно совершать платежи в нашу Микрофинансовую организацию «Блиц» во всех
+                        отделениях
+                        «Связной» и «Евросеть»!</a></h4>
+
+                    <p>Теперь можно совершать платежи в нашу Микрофинансовую организацию «Блиц» во всех отделениях
+                        «Связной» и «Евросеть»! </p>
+                </div>
+                <div class="btn btn-more">УЗНАТЬ ПОДРОБНОСТИ</div>
+                <div class="row news-item-date">21.01.2014 14:34</div>
+            </div>
+            <div class="col-md-3 news-main-item-index-last">
+                <div class="news-main-item-index-last-index">
+                    <h3 class="text-center">. . .</h3>
+
+                    <h3 class="text-center"><a href="#">ВСЕ НОВОСТИ</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-content-layout main-content-layout-items-list">
+    <div class="container">
+        <h2 class="text-center">СПЕЦПРЕДЛОЖЕНИЯ</h2>
+
+        <div class="news-main-item clearfix">
+            <div class="col-md-3">
+                <img class="img-responsive" src="images/tmp/tmp-4.jpg">
+
+                <div class="news-index-bullet"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <h4><a href="#">Выдача займов на длительный срок по сниженным процентам и ставкам</a></h4>
+
+                    <div class="btn btn-more">УЗНАТЬ ПОДРОБНОСТИ</div>
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive" src="images/tmp/tmp-6.jpg">
+
+                <div class="news-index-bullet"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <h4><a href="#">Рефинансируем обязательства по микрозаймам</a></h4>
+
+                    <div class="btn btn-more">УЗНАТЬ ПОДРОБНОСТИ</div>
+                </div>
+            </div>
+        </div>
+        <div class="news-main-item clearfix">
+            <div class="col-md-3">
+                <img class="img-responsive" src="images/tmp/tmp-5.jpg">
+
+                <div class="news-index-bullet"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <h4><a href="#">Выдача займов на длительный срок по сниженным процентам и ставкам</a></h4>
+
+                    <div class="btn btn-more">УЗНАТЬ ПОДРОБНОСТИ</div>
+                </div>
+            </div>
+            <div class="col-md-3 news-main-item-index-last special-offers-last">
+                <div class="news-main-item-index-last-index">
+                    <h3 class="text-center">. . .</h3>
+
+                    <h3 class="text-center"><a href="#">ВСЕ СПЕЦПРЕДЛОЖЕНИЯ</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-content-layout main-layout-banner-layout">
+    <div class="container">
+        <h3 class="text-center">РЕКЛАМНЫЙ БАННЕР</h3>
+
+        <p CLASS="text-center">Слоган рекламного баннера</p>
+    </div>
+</div>
+
+<div class="main-content-layout nav-bar-bottom-layout">
+    <div class="container nav-bar-bottom-container">
+        <div class="row">
+            <ul class="nav navbar-nav pull-left">
+                <li class="active"><a href="#"><span>О компании</span></a></li>
+                <li><a href="#"><span>Займы</span></a></li>
+                <li><a href="#"><span>Консультация специалиста</span></a></li>
+                <li><a href="#"><span>Полезная информация</span></a></li>
+                <li><a href="#"><span>Контакты</span></a></li>
+                <li><a class="order-call" href="#">Заказать звонок</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer class="container footer-layout">
+    <div class="row">
+        <div class="col-md-3">
+            <h5><strong>КОНТАКТЫ</strong></h5>
+
+            <p>Россия, г. Москва,<br>ул.Большая Полянка, д.42, стр.1</p>
+            <a href="#" class="btn btn-more-small">ПОКАЗАТЬ НА КАРТЕ</a>
+        </div>
+        <div class="col-md-6">
+            <div class="pull-left">
+                <p class="first-row">тел. <strong>7-499-230-7968</strong>
+                    <br>тел. <strong>7-916-596-8688</strong>
+                </p>
+
+                <p class="footer-social-container">
+                    <a href="#"><img src="images/icons/social/icon-vk.png"></a>
+                    <a href="#"><img src="images/icons/social/icon-fb.png"></a>
+                    <a href="#"><img src="images/icons/social/icon=twitter.png"></a>
+                    <a href="#"><img src="images/icons/social/icon-lj.png"></a>
+                </p>
+            </div>
+            <div class="footer-item-index pull-left ">
+                <p class="first-row">тел. <strong>7-499-230-7968</strong>
+                    <br>тел. <strong>7-916-596-8688</strong>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-3 text-right">
+            <p class="first-row">Создание сайта <strong>копирайты</strong>
+                <br>Создание сайта <strong>Копирайты</strong>
+            </p>
+        </div>
+
+    </div>
+</footer>
+<span class="top-link-block" class="hidden">
+    <a href="#top" class="back-to-top" onclick="$('html,body').animate({scrollTop:0},'slow');return false;"></a>
+</span><!-- /top-link-block -->
+
+
+</body>
+</html>
